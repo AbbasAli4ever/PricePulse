@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.zoom-background{
+    background-size: 100%;
+    transition: background-size 0.5s ease-in-out;
+}
+
+.zoom-background:hover {
+    background-size: 110%;
+}
+
+.zoom-background-trend{
+    background-size: 135%;
+    transition: background-size 0.5s ease-in-out;
+}
+
+.zoom-background-trend:hover {
+    background-size: 150%;
+}
+@keyframes spin-clockwise {
+    0% {
+      transform: rotate(-90deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes slide-right {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes spin-anticlockwise {
+    0% {
+      transform: rotate(90deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .animate-spin-clockwise {
+    animation: spin-clockwise 1s linear forwards;
+  }
+
+  .animate-slide-right {
+    animation: slide-right 1.5s ease-out forwards;
+  }
+
+  .animate-spin-anticlockwise {
+    animation: spin-anticlockwise 1s linear forwards;
+  }
+
